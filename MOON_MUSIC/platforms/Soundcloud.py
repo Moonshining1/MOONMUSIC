@@ -2,7 +2,7 @@ from os import path
 
 from yt_dlp import YoutubeDL
 
-from SACHIN_MUSIC.utils.formatters import seconds_to_min
+from MOON_MUSIC.utils.formatters import seconds_to_min
 
 
 class SoundAPI:
