@@ -26,21 +26,7 @@ from config import BANNED_USERS
 from strings import get_string
 
 NEXIO = [
-    "https://files.catbox.moe/jrupn9.jpg",
-    "https://files.catbox.moe/5z141p.jpg",
-    "https://files.catbox.moe/fnl0h7.jpg",
-    "https://files.catbox.moe/1lz1go.jpg",
-    "https://files.catbox.moe/avackl.jpg",
-    "https://files.catbox.moe/1yrzwz.jpg",
-    "https://files.catbox.moe/6y22qw.jpg",
-    "https://files.catbox.moe/gnnsf2.jpg",
-    "https://files.catbox.moe/ss6r60.jpg",
-    "https://files.catbox.moe/yuob18.jpg",
-    "https://files.catbox.moe/i9xrrp.jpg",
-    "https://files.catbox.moe/a9tx8f.jpg"
-    "https://files.catbox.moe/wlt26x.jpg",
-    "https://files.catbox.moe/c1lylh.jpg",
-    "https://files.catbox.moe/82eymp.jpg",
+    "https://files.catbox.moe/ivusge.jpg",
 ]
 
 HIMANSHI = [
@@ -128,7 +114,7 @@ chat_id=message.chat.id,
         await message.reply_sticker(
         random.choice(HIMANSHI),)
         await message.reply_photo(
-            "https://files.catbox.moe/ivusge.jpg",  # Specific photo URL
+            random.choice(NEXIO),
             caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM,served_users,served_chats),
             reply_markup=InlineKeyboardMarkup(out),
         )
