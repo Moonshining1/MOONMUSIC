@@ -1,10 +1,10 @@
 from MOON_MUSIC.misc import SUDOERS
 from MOON_MUSIC.utils.database import get_lang, is_maintenance
 from strings import get_string
-from MOON_MUSIC import app  # Ensure the `app` object is imported
+from MOON_MUSIC import app  # Ensure `app` is imported
 import logging  # For error logging
 
-SUPPORT_CHAT = "https://t.me/support_chat"  # Define SUPPORT_CHAT if not defined
+SUPPORT_CHAT = "https://t.me/kittyxupdates"  # Define SUPPORT_CHAT if not already defined
 
 # Decorator for handling language in regular commands
 def language(mystic):
@@ -28,6 +28,8 @@ def language(mystic):
         try:
             lang_code = await get_lang(message.chat.id) or "en"
             language = get_string(lang_code)
+            if not language:
+                raise ValueError(f"Language not found for code: {lang_code}")
         except Exception as e:
             logging.error(f"Error fetching language: {e}")
             language = get_string("en")
@@ -46,7 +48,7 @@ def languageCB(mystic):
                 return await CallbackQuery.answer(
                     text=(
                         f"{app.mention} is under maintenance. "
-                        f"Visit Support Chat for more info."
+                        f"Visit <a href='{SUPPORT_CHAT}'>Support Chat</a> for more info."
                     ),
                     show_alert=True,
                 )
@@ -55,6 +57,8 @@ def languageCB(mystic):
         try:
             lang_code = await get_lang(CallbackQuery.message.chat.id) or "en"
             language = get_string(lang_code)
+            if not language:
+                raise ValueError(f"Language not found for code: {lang_code}")
         except Exception as e:
             logging.error(f"Error fetching language: {e}")
             language = get_string("en")
@@ -71,6 +75,8 @@ def LanguageStart(mystic):
         try:
             lang_code = await get_lang(message.chat.id) or "en"
             language = get_string(lang_code)
+            if not language:
+                raise ValueError(f"Language not found for code: {lang_code}")
         except Exception as e:
             logging.error(f"Error fetching language: {e}")
             language = get_string("en")
