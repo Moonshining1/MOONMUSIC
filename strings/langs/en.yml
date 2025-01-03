@@ -85,7 +85,7 @@ admin_39 : "❖ ʀєϻσᴠєᴅ 1 υᴘᴠσᴛє."
 admin_40 : "❖ υᴘᴠσᴛєᴅ."
 
 start_1 : "❖ {0} /n ⌾ ɪs ᴧʟɪᴠє .\n\n<b>⌾ υᴘᴛɪϻє :</b> {1}"
-start_2 : "```Hey, I am {1} 🎶 !\n\nMajboot, pyara, sabka yaar, Sangeet bajaaye lagataar. Chats ko rakhe hamesha set, Ye bot hai sabse zabardast!\n\nA powerful, stable, and cute Telegram music and management bot.\n\nMade with [Alfaazon Ka Aaina](https://t.me/shayariAlfaazonKaAaina)```"
+start_2 : "Hey, I am {1} 🎶 !\n\nMajboot, pyara, sabka yaar, Sangeet bajaaye lagataar. Chats ko rakhe hamesha set, Ye bot hai sabse zabardast!\n\nA powerful, stable, and cute Telegram music and management bot.\n\nMade with [Alfaazon Ka Aaina](https://t.me/shayariAlfaazonKaAaina)"
 start_3 : "<blockquote>❖ ʜєʏ {0},\nᴛʜɪs ɪs {1}\n\nᴛʜᴧηᴋs ғσʀ ᴧᴅᴅɪηɢ ϻє ɪη {2}, {3} ᴄᴧη ησᴡ ᴩʟᴧʏ sσηɢs ɪη ᴛʜɪs ᴄʜᴧᴛ </blockquote>."
 start_4 : "❖ <b>sυᴘєʀɢʀσυᴘ ηєєᴅєᴅ</b> \n\nᴘʟєᴧsє ᴄσηᴠєʀᴛ ʏσυʀ <b>ɢʀσυᴘ</b> ᴛσ <b>sυᴘєʀɢʀσυᴘ</b> ᴧηᴅ ᴛʜєη ᴧᴅᴅ ϻє ᴧɢᴧɪη.\n\n<b>ʜσᴡ ᴛσ ϻᴧᴋє sυᴘєʀɢʀσυᴘ ?</b>\n- ϻᴧᴋє ʏσυʀ ɢʀσυᴘ's ᴄʜᴧᴛ ʜɪsᴛσʀʏ <b>ᴠɪsɪʙʟє</b> σηᴄє."
 start_5 : "❖ <b>↝ ʙʟᴧᴄᴋʟɪsᴛєᴅ ᴄʜᴧᴛ ↜</b>\n\nᴛʜɪs ᴄʜᴧᴛ ɪs ʙʟᴧᴄᴋʟɪsᴛєᴅ ση {0} ᴅᴧᴛᴧʙᴧsє.\nʀєǫυєsᴛ ᴧ <a href={1}>sυᴅσ υsєʀ</a> ᴛσ υηʙʟᴧᴄᴋʟɪsᴛ ʏσυʀ ᴄʜᴧᴛ σʀ ᴠɪsɪᴛ <a href={2}>sυᴘᴘσʀᴛ ᴄʜᴧᴛ.</a>"
@@ -174,7 +174,7 @@ queue_6 : "<b>❖ ᴅυʀᴧᴛɪση :</b> υηᴋησᴡη ᴅυʀᴧᴛɪση
 queue_7 : "\n❖ ᴄʟɪᴄᴋ ση ʙυᴛᴛση ʙєʟσᴡ ᴛσ ɢєᴛ ᴡʜσʟє ǫυєυєᴅ ʟɪsᴛ."
 queue_8 : "❖ <b>{0} ᴘʟᴧʏєʀ</b>\n\n❖ <b>sᴛʀєᴧϻɪηɢ :</b> {1}\n\n❖ <b>sᴛʀєᴧϻ ᴛʏᴘє :</b> {2}\n❖ <b>ʀєǫυєsᴛєᴅ ʙʏ :</b> {3}\n❖ {4}"
 
-stream_1 : "```\n<b>❖ ᴄυᴛє [ᴀɴɴɪᴇ](https://t.me/musicXanime_bot)```\n ση sᴛʀєᴧϻɪηɢ ⏤͟͞●</b></blockquote>\n\n<blockquote><b>❍ ᴛɪᴛʟє ➥</b> <a href={0}>{1}</a> \n<b>❍ ᴛɪϻє ➥</b> {2} ϻɪηυᴛєs \n<b>❍ ʙʏ ➥</b> {3} </blockquote>\n\n<blockquote><b>❖ ϻᴧᴅє ʙʏ  ➛ [ɢʀᴀɴᴅ ᴍᴀsᴛɪ](https://t.me/grandxmasti) </b></blockquote>"
+stream_1 : "```<b>❖ ᴄυᴛє [ᴀɴɴɪᴇ](https://t.me/musicXanime_bot) ση sᴛʀєᴧϻɪηɢ ⏤͟͞●</b>```>\n\n```<b>❍ ᴛɪᴛʟє ➥</b> <a href={0}>{1}</a> \n<b>❍ ᴛɪϻє ➥</b> {2} ϻɪηυᴛєs \n<b>❍ ʙʏ ➥</b> {3} ```\n\n```<b>❖ ϻᴧᴅє ʙʏ  ➛ [ɢʀᴀɴᴅ ᴍᴀsᴛɪ](https://t.me/grandxmasti) </b>```"
 stream_2 : "<blockquote><b>❖ ᴄυᴛє [ᴀɴɴɪᴇ](https://t.me/musicXanime_bot) ση sᴛʀєᴧϻɪηɢ ⏤͟͞●</b></blockquote>\n\n<blockquote><b>❍ sᴛʀєᴧϻ ᴛʏᴘє ➥</b> ʟɪᴠєsᴛʀєᴧϻ [ υʀʟ ]\n<b>❍ ʙʏ ➥</b> {0}</blockquote>"
 
 
