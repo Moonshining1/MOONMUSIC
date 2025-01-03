@@ -174,7 +174,7 @@ queue_6 : "<b>❖ ᴅυʀᴧᴛɪση :</b> υηᴋησᴡη ᴅυʀᴧᴛɪση
 queue_7 : "\n❖ ᴄʟɪᴄᴋ ση ʙυᴛᴛση ʙєʟσᴡ ᴛσ ɢєᴛ ᴡʜσʟє ǫυєυєᴅ ʟɪsᴛ."
 queue_8 : "❖ <b>{0} ᴘʟᴧʏєʀ</b>\n\n❖ <b>sᴛʀєᴧϻɪηɢ :</b> {1}\n\n❖ <b>sᴛʀєᴧϻ ᴛʏᴘє :</b> {2}\n❖ <b>ʀєǫυєsᴛєᴅ ʙʏ :</b> {3}\n❖ {4}"
 
-stream_1 : "```<b>❖ ᴄυᴛє [ᴀɴɴɪᴇ](https://t.me/musicXanime_bot) ση sᴛʀєᴧϻɪηɢ ⏤͟͞●</b>```>\n\n```<b>❍ ᴛɪᴛʟє ➥</b> <a href={0}>{1}</a> \n<b>❍ ᴛɪϻє ➥</b> {2} ϻɪηυᴛєs \n<b>❍ ʙʏ ➥</b> {3} ```\n\n```<b>❖ ϻᴧᴅє ʙʏ  ➛ [ɢʀᴀɴᴅ ᴍᴀsᴛɪ](https://t.me/grandxmasti) </b>```"
+stream_1 : "```<b>❖ ᴄυᴛє [ᴀɴɴɪᴇ](https://t.me/musicXanime_bot) ση sᴛʀєᴧϻɪηɢ ⏤͟͞●</b>```\n\n```<b>❍ ᴛɪᴛʟє ➥</b> <a href={0}>{1}</a> \n<b>❍ ᴛɪϻє ➥</b> {2} ϻɪηυᴛєs \n<b>❍ ʙʏ ➥</b> {3} ```\n\n```<b>❖ ϻᴧᴅє ʙʏ  ➛ [ɢʀᴀɴᴅ ᴍᴀsᴛɪ](https://t.me/grandxmasti) </b>```"
 stream_2 : "<blockquote><b>❖ ᴄυᴛє [ᴀɴɴɪᴇ](https://t.me/musicXanime_bot) ση sᴛʀєᴧϻɪηɢ ⏤͟͞●</b></blockquote>\n\n<blockquote><b>❍ sᴛʀєᴧϻ ᴛʏᴘє ➥</b> ʟɪᴠєsᴛʀєᴧϻ [ υʀʟ ]\n<b>❍ ʙʏ ➥</b> {0}</blockquote>"
 
 
