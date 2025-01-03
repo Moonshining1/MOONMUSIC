@@ -85,7 +85,15 @@ admin_39 : "❖ ʀєϻσᴠєᴅ 1 υᴘᴠσᴛє."
 admin_40 : "❖ υᴘᴠσᴛєᴅ."
 
 start_1 : "❖ {0} /n ⌾ ɪs ᴧʟɪᴠє .\n\n<b>⌾ υᴘᴛɪϻє :</b> {1}"
-start_2 : """**Hey, I am {1} 🎶 !** \n\n**Majboot, pyara, sabka yaar, Sangeet bajaaye lagataar. Chats ko rakhe hamesha set, Ye bot hai sabse zabardast!\n\n**A powerful, stable, and cute Telegram music and management bot.**\n\n**Made with [Alfaazon Ka Aaina](https://t.me/shayariAlfaazonKaAaina) **"""
+start_2 : |
+  **Hey, I am {1} 🎶 !**
+
+  **Majboot, pyara, sabka yaar, Sangeet bajaaye lagataar.  
+  Chats ko rakhe hamesha set, Ye bot hai sabse zabardast!**
+
+  **A powerful, stable, and cute Telegram music and management bot.**
+
+  **Made with [Alfaazon Ka Aaina](https://t.me/shayariAlfaazonKaAaina)**
 start_3 : "<blockquote>❖ ʜєʏ {0},\nᴛʜɪs ɪs {1}\n\nᴛʜᴧηᴋs ғσʀ ᴧᴅᴅɪηɢ ϻє ɪη {2}, {3} ᴄᴧη ησᴡ ᴩʟᴧʏ sσηɢs ɪη ᴛʜɪs ᴄʜᴧᴛ </blockquote>."
 start_4 : "❖ <b>sυᴘєʀɢʀσυᴘ ηєєᴅєᴅ</b> \n\nᴘʟєᴧsє ᴄσηᴠєʀᴛ ʏσυʀ <b>ɢʀσυᴘ</b> ᴛσ <b>sυᴘєʀɢʀσυᴘ</b> ᴧηᴅ ᴛʜєη ᴧᴅᴅ ϻє ᴧɢᴧɪη.\n\n<b>ʜσᴡ ᴛσ ϻᴧᴋє sυᴘєʀɢʀσυᴘ ?</b>\n- ϻᴧᴋє ʏσυʀ ɢʀσυᴘ's ᴄʜᴧᴛ ʜɪsᴛσʀʏ <b>ᴠɪsɪʙʟє</b> σηᴄє."
 start_5 : "❖ <b>↝ ʙʟᴧᴄᴋʟɪsᴛєᴅ ᴄʜᴧᴛ ↜</b>\n\nᴛʜɪs ᴄʜᴧᴛ ɪs ʙʟᴧᴄᴋʟɪsᴛєᴅ ση {0} ᴅᴧᴛᴧʙᴧsє.\nʀєǫυєsᴛ ᴧ <a href={1}>sυᴅσ υsєʀ</a> ᴛσ υηʙʟᴧᴄᴋʟɪsᴛ ʏσυʀ ᴄʜᴧᴛ σʀ ᴠɪsɪᴛ <a href={2}>sυᴘᴘσʀᴛ ᴄʜᴧᴛ.</a>"
