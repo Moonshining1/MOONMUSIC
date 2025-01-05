@@ -78,7 +78,7 @@ class BUTTONS(object):
     
     ABUTTON = [
         [
-            InlineKeyboardButton("• ᴧηηɪє ᴠ2.0 •", callback_data="MAIN_BACK HELP_ABOUT"),
+            InlineKeyboardButton("• ᴧηηɪє ᴠ2.0 •", callback_data="GUIDEBOT),
             
         ],        
         [
@@ -112,7 +112,7 @@ class BUTTONS(object):
 
 
 
-GUTTON = [
+GBUTTON = [
         [
             InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/THE_INCRICIBLE"),
             InlineKeyboardButton("˹ υᴘᴅᴧᴛєs ˼", url="https://t.me/ZOYU_SUPPORT"),
