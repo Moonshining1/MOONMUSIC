@@ -15,14 +15,6 @@ from MOON_MUSIC.help.helper import Helper
 # MUSIC | MUSIC | MUSIC | MUSIC | MUSIC | MUSIC | MUSIC | MUSIC | MUSIC | MUSIC | MUSIC | MUSIC | MUSIC | MUSIC | MUSIC | 
 #------------------------------------------------------------------------------------------------------------------------
 
-from pyrogram import Client, filters
-from pyrogram.types import CallbackQuery
-
-@app.on_callback_query(filters.regex("settings_back_helper") & ~BANNED_USERS)
-async def back_handler(client: Client, query: CallbackQuery):
-    await query.message.delete()  
-
-
 
 @app.on_message(filters.command(["help"]) & filters.private & ~BANNED_USERS)
 @app.on_callback_query(filters.regex("settings_back_helper") & ~BANNED_USERS)
