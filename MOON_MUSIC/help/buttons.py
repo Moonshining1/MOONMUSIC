@@ -86,7 +86,7 @@ class BUTTONS(object):
             InlineKeyboardButton("˹ υᴘᴅᴧᴛєs ˼", url="https://t.me/ZOYU_SUPPORT"),
         ],
         [
-            InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/THE_INCRICIBLE"),
+            InlineKeyboardButton("˹ ɢυɪᴅє  ˼", callback_data="MAIN_BACK HELP_ABOUT"),
             InlineKeyboardButton("˹ υᴘᴅᴧᴛєs ˼", url="https://t.me/ZOYU_SUPPORT"),
         ],
         [
@@ -109,3 +109,20 @@ class BUTTONS(object):
             
         ]
         ]
+
+
+
+GUTTON = [
+        [
+            InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/THE_INCRICIBLE"),
+            InlineKeyboardButton("˹ υᴘᴅᴧᴛєs ˼", url="https://t.me/ZOYU_SUPPORT"),
+        ],
+        [
+            InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/THE_INCRICIBLE"),
+            InlineKeyboardButton("˹ υᴘᴅᴧᴛєs ˼", url="https://t.me/ZOYU_SUPPORT"),
+        ],
+        [
+            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="settingsback_helper"),
+            
+        ]
+]
