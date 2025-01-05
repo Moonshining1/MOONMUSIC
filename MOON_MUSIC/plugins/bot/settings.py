@@ -70,22 +70,28 @@ async def settings_cb(client, CallbackQuery, _):
 @languageCB
 async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
     try:
-        await CallbackQuery.answer()
-    except:
-        pass
+        await CallbackQuery.answer()  # Answer the callback query to avoid timeout
+    except Exception as e:
+        print(f"Error in answering callback query: {e}")
+    
     if CallbackQuery.message.chat.type == ChatType.PRIVATE:
-        await app.resolve_peer(OWNER_ID)
-        OWNER = OWNER_ID
-        buttons = private_panel(_)
-        return await CallbackQuery.edit_message_text(
-            _["start_2"].format(CallbackQuery.from_user.mention, app.mention),
-            reply_markup=InlineKeyboardMarkup(buttons),
-        )
+        OWNER = OWNER_ID  # Direct assignment; assuming OWNER_ID is already defined
+        buttons = private_panel(_)  # Generate buttons for private panel
+        try:
+            return await CallbackQuery.edit_message_text(
+                _["start_2"].format(CallbackQuery.from_user.mention, app.mention),
+                reply_markup=InlineKeyboardMarkup(buttons),
+            )
+        except Exception as e:
+            print(f"Error in editing private message: {e}")
     else:
-        buttons = setting_markup(_)
-        return await CallbackQuery.edit_message_reply_markup(
-            reply_markup=InlineKeyboardMarkup(buttons)
-        )
+        buttons = setting_markup(_)  # Generate buttons for group settings
+        try:
+            return await CallbackQuery.edit_message_reply_markup(
+                reply_markup=InlineKeyboardMarkup(buttons)
+            )
+        except Exception as e:
+            print(f"Error in editing group message: {e}")
 
 
 @app.on_callback_query(
