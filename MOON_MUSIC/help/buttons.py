@@ -67,7 +67,7 @@ class BUTTONS(object):
             InlineKeyboardButton("˹ σᴡηєꝛ's ᴄʟᴧη 🎄 ˼", url="https://t.me/Grandxmasti"),
         ],
         [
-            InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/THE_INCRICIBLE"),
+            InlineKeyboardButton("˹ ʜєʟᴘ ˼", callback_data="MAIN_CP"),
             InlineKeyboardButton("˹ υᴘᴅᴧᴛєs ˼", url="https://t.me/ZOYU_SUPPORT"),
         ],
         [
