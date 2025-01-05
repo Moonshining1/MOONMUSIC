@@ -113,11 +113,11 @@ class BUTTONS(object):
     GBUTTON = [
         [
             InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/THE_INCRICIBLE"),
-            InlineKeyboardButton("˹ υᴘᴅᴧᴛєs ˼", url="https://t.me/ZOYU_SUPPORT"),
+            InlineKeyboardButton("˹ ᴅєᴠ ˼",  callback_data="PROMOTION_CP"),
         ],
         [
-            InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/THE_INCRICIBLE"),
-            InlineKeyboardButton("˹ υᴘᴅᴧᴛєs ˼", url="https://t.me/ZOYU_SUPPORT"),
+            InlineKeyboardButton("˹ ɢυɪᴅє  ˼", callback_data="MAIN_BACK HELP_ABOUT"),
+            InlineKeyboardButton("˹ sσυꝛᴄє ˼", url="https://t.me/ZOYU_SUPPORT"),
         ],
         [
             InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="settingsback_helper"),
