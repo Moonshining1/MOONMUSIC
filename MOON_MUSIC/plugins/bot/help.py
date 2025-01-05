@@ -255,6 +255,30 @@ async def mb_plugin_button(client, CallbackQuery):
         await CallbackQuery.edit_message_text(getattr(Helper, cb), reply_markup=keyboard)
 
 
+
+@app.on_callback_query(filters.regex("GUIDEBOT") & ~BANNED_USERS)
+async def helper_cb(client, CallbackQuery):
+    await CallbackQuery.edit_message_text(Helper.HELP_ALLBOT, reply_markup=InlineKeyboardMarkup(BUTTONS.ABUTTON))
+
+        
+@app.on_callback_query(filters.regex('GUIDEBOT_BACK'))      
+async def mb_plugin_button(client, CallbackQuery):
+    callback_data = CallbackQuery.data.strip()
+    cb = callback_data.split(None, 1)[1]
+    keyboard = InlineKeyboardMarkup(
+    [
+    [
+    InlineKeyboardButton("ʙᴀᴄᴋ", callback_data=f"GUIDEBOT_CP")
+    ]
+    ]
+    )
+    if cb == "GUIDEBOT":
+        await CallbackQuery.edit_message_text(f"`something errors`",reply_markup=keyboard,parse_mode=enums.ParseMode.MARKDOWN)
+    else:
+        await CallbackQuery.edit_message_text(getattr(Helper, cb), reply_markup=keyboard)
+        
+
+
 #------------------------------------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------
