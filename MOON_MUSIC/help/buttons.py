@@ -90,7 +90,7 @@ class BUTTONS(object):
             InlineKeyboardButton("˹ sσυꝛᴄє ˼", url="https://t.me/Kittyxupdates"),
         ],
         [
-            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="GALAXYBOT_CP"),
+            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="settingsback_helper"),
             
         ]
         ]
@@ -120,7 +120,7 @@ class BUTTONS(object):
             InlineKeyboardButton("˹ sσυꝛᴄє ˼", url="https://t.me/Kittyxupdates"),
         ],
         [
-            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="ALLBOT_CP"),
+            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="settingsback_helper"),
             
         ]
         ]
@@ -135,7 +135,7 @@ class BUTTONS(object):
             InlineKeyboardButton("˹ sσυꝛᴄє ˼", url="https://t.me/Kittyxupdates"),
         ],
         [
-            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="MAIN_CP"),
+            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="settingsback_helper"),
             
         ]
         ]
