@@ -110,6 +110,21 @@ class BUTTONS(object):
         ]
         ]
 
+    GBUTTON = [
+        [
+            InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/THE_INCRICIBLE"),
+            InlineKeyboardButton("˹ ᴅєᴠ ˼",  callback_data="PROMOTION_CP"),
+        ],
+        [
+            InlineKeyboardButton("˹ ʙᴧsɪᴄ ɢυɪᴅє  ˼", url="https://t.me/THE_INCRICIBLE"),
+            InlineKeyboardButton("˹ sσυꝛᴄє ˼", url="https://t.me/ZOYU_SUPPORT"),
+        ],
+        [
+            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="settingsback_helper"),
+            
+        ]
+        ]
+
     LBUTTON = [
         [
             InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/THE_INCRICIBLE"),
