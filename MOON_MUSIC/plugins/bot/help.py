@@ -262,7 +262,7 @@ async def mb_plugin_button(client, CallbackQuery):
 
 @app.on_callback_query(filters.regex("GUIDEBOT_CP") & ~BANNED_USERS)
 async def helper_cb(client, CallbackQuery):
-    await CallbackQuery.edit_message_text(Helper.HELP_GUIDEBOT, reply_markup=InlineKeyboardMarkup(BUTTONS.GBUTTON))
+    await CallbackQuery.edit_message_text(Helper.HELP_ALLBOT, reply_markup=InlineKeyboardMarkup(BUTTONS.GBUTTON))
 
         
 @app.on_callback_query(filters.regex('GUIDEBOT_BACK'))      
@@ -287,7 +287,7 @@ async def mb_plugin_button(client, CallbackQuery):
         
 @app.on_callback_query(filters.regex("GALAXYBOT_CP") & ~BANNED_USERS)
 async def helper_cb(client, CallbackQuery):
-    await CallbackQuery.edit_message_text(Helper.HELP_GALAXYBOT, reply_markup=InlineKeyboardMarkup(BUTTONS.LBUTTON))
+    await CallbackQuery.edit_message_text(Helper.HELP_ALLBOT, reply_markup=InlineKeyboardMarkup(BUTTONS.LBUTTON))
 
         
 @app.on_callback_query(filters.regex('GALAXYBOT_BACK'))      
