@@ -16,7 +16,7 @@ OWNER_ID = list(
 )  # Input type must be interger
 
 # You'll need a Private Group ID for this.
-LOGGER_ID = int(getenv("LOG_GROUP_ID", ""))
+LOGGER_ID = int(getenv("LOGGER_ID", ""))
 
 BANNED_USERS = filters.user()
 YTDOWNLOADER = 1
