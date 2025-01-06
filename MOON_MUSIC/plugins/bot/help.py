@@ -260,42 +260,49 @@ async def mb_plugin_button(client, CallbackQuery):
 #------------------------------------------------------------------------------------------------------------------------
 
 
-from pyrogram import Client, filters, enums
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+@app.on_callback_query(filters.regex("GUIDEBOT_CP") & ~BANNED_USERS)
+async def helper_cb(client, CallbackQuery):
+    await CallbackQuery.edit_message_text(Helper.HELP_GUIDEBOT, reply_markup=InlineKeyboardMarkup(BUTTONS.GBUTTON))
 
-# Helper function to handle callback edits
-async def handle_callback(client, CallbackQuery, back_callback, buttons):
+        
+@app.on_callback_query(filters.regex('GUIDEBOT_BACK'))      
+async def mb_plugin_button(client, CallbackQuery):
     callback_data = CallbackQuery.data.strip()
     cb = callback_data.split(None, 1)[1]
     keyboard = InlineKeyboardMarkup(
-        [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data=back_callback)]]
+    [
+    [
+    InlineKeyboardButton("Ê™á´€á´„á´‹", callback_data=f"GUIDEBOT_CP")
+    ]
+    ]
     )
-    
-    if cb == back_callback:
-        await CallbackQuery.edit_message_text("`something errors`", reply_markup=keyboard, parse_mode=enums.ParseMode.MARKDOWN)
+    if cb == "GUIDEBOT":
+        await CallbackQuery.edit_message_text(f"`something errors`",reply_markup=keyboard,parse_mode=enums.ParseMode.MARKDOWN)
     else:
         await CallbackQuery.edit_message_text(getattr(Helper, cb), reply_markup=keyboard)
-
-# GUIDEBOT handlers
-@app.on_callback_query(filters.regex("GUIDEBOT_CP") & ~BANNED_USERS)
-async def guidebot_helper_cb(client, CallbackQuery):
-    await CallbackQuery.edit_message_text(
-        Helper.HELP_ALLBOT, 
-        reply_markup=InlineKeyboardMarkup(BUTTONS.GBUTTON)
-    )
-
-@app.on_callback_query(filters.regex('GUIDEBOT_BACK'))
-async def guidebot_back_button(client, CallbackQuery):
-    await handle_callback(client, CallbackQuery, "GUIDEBOT_CP", BUTTONS.GBUTTON)
-
-# GALAXYBOT handlers
+        
+        
+#--------------
+        
+        
 @app.on_callback_query(filters.regex("GALAXYBOT_CP") & ~BANNED_USERS)
-async def galaxybot_helper_cb(client, CallbackQuery):
-    await CallbackQuery.edit_message_text(
-        Helper.HELP_ALLBOT, 
-        reply_markup=InlineKeyboardMarkup(BUTTONS.LBUTTON)
-    )
+async def helper_cb(client, CallbackQuery):
+    await CallbackQuery.edit_message_text(Helper.HELP_GALAXYBOT, reply_markup=InlineKeyboardMarkup(BUTTONS.LBUTTON))
 
-@app.on_callback_query(filters.regex('GALAXYBOT_BACK'))
-async def galaxybot_back_button(client, CallbackQuery):
-    await handle_callback(client, CallbackQuery, "GALAXYBOT_CP", BUTTONS.LBUTTON)
+        
+@app.on_callback_query(filters.regex('GALAXYBOT_BACK'))      
+async def mb_plugin_button(client, CallbackQuery):
+    callback_data = CallbackQuery.data.strip()
+    cb = callback_data.split(None, 1)[1]
+    keyboard = InlineKeyboardMarkup(
+    [
+    [
+    InlineKeyboardButton("Ê™á´€á´„á´‹", callback_data=f"GALAXYBOT_CP")
+    ]
+    ]
+    )
+    if cb == "GALAXYBOT":
+        await CallbackQuery.edit_message_text(f"`something errors`",reply_markup=keyboard,parse_mode=enums.ParseMode.MARKDOWN)
+    else:
+        await CallbackQuery.edit_message_text(getattr(Helper, cb), reply_markup=keyboard)
+        
