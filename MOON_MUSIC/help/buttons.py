@@ -78,7 +78,7 @@ class BUTTONS(object):
     
     ABUTTON = [
         [
-            InlineKeyboardButton("• ᴧηηɪє ᴠ2.0 •", callback_data="GUIDEBOT"),
+            InlineKeyboardButton("• ᴧηηɪє ᴠ2.0 •", callback_data="GUIDEBOT_CP"),
             
         ],        
         [
@@ -102,7 +102,7 @@ class BUTTONS(object):
         ],
         [
             InlineKeyboardButton("˹ ᴛσσʟs ˼", callback_data="TOOL_CP"),
-            InlineKeyboardButton("˹ ɢᴧʟᴧxʏ ˼", callback_data="GALAXYBOT"),
+            InlineKeyboardButton("˹ ɢᴧʟᴧxʏ ˼", callback_data="GALAXYBOT_CP"),
         ],
         [
             InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="MAIN_BACK"),
