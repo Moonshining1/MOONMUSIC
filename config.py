@@ -46,6 +46,7 @@ CLEANMODE_DELETE_MINS = int(
 )  # Remember to give value in Seconds
 
 BANNED_USERS = filters.user()
+TEMP_DB_FOLDER = "tempdb"
 adminlist = {}
 lyrical = {}
 votemode = {}
