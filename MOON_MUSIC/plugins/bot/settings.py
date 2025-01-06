@@ -73,20 +73,33 @@ async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
         await CallbackQuery.answer()
     except:
         pass
+    
     if CallbackQuery.message.chat.type == ChatType.PRIVATE:
-        await app.resolve_peer(OWNER_ID)
-        OWNER = OWNER_ID
+        # Generate the private panel buttons
         buttons = private_panel(_)
-        return await CallbackQuery.edit_message_text(
-            _["start_2"].format(CallbackQuery.from_user.mention, app.mention),
-            reply_markup=InlineKeyboardMarkup(buttons),
-        )
+        # Edit the message with updated text and buttons
+        try:
+            await CallbackQuery.edit_message_text(
+                _["start_2"].format(CallbackQuery.from_user.mention, app.mention),
+                reply_markup=InlineKeyboardMarkup(buttons),
+            )
+        except MessageNotModified:
+            return
     else:
+        # Generate the group settings buttons
         buttons = setting_markup(_)
-        return await CallbackQuery.edit_message_reply_markup(
-            reply_markup=InlineKeyboardMarkup(buttons)
-        )
-
+        # Edit the message with updated text and buttons
+        try:
+            await CallbackQuery.edit_message_text(
+                _["setting_1"].format(
+                    app.mention,
+                    CallbackQuery.message.chat.id,
+                    CallbackQuery.message.chat.title,
+                ),
+                reply_markup=InlineKeyboardMarkup(buttons),
+            )
+        except MessageNotModified:
+            return
 
 @app.on_callback_query(
     filters.regex(
