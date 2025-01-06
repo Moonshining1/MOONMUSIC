@@ -422,7 +422,7 @@ async def settings_back_markup(client, CallbackQuery: CallbackQuery):
 
     _ = get_language_strings  # Assuming `_` is a function that returns localized strings
 
-    if CallbackQuery.message.chat.type == ChatType.PRIVATE:
+    if CallbackQuery.message.chat.type == "private":  # Direct string check
         try:
             await client.resolve_peer(OWNER_ID)
         except PeerIdInvalid:
