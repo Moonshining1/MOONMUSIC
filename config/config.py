@@ -18,6 +18,9 @@ OWNER_ID = list(
 # You'll need a Private Group ID for this.
 LOGGER_ID = int(getenv("LOGGER_ID", "0"))
 
+
+MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+
 BANNED_USERS = filters.user()
 YTDOWNLOADER = 1
 LOG = 2
