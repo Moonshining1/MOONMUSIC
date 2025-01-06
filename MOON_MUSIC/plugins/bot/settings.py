@@ -75,14 +75,18 @@ async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
     except Exception as e:
         print(f"Failed to answer callback query: {e}")
         
+    buttons = (
+        private_panel(_) 
+        if CallbackQuery.message.chat.type == ChatType.PRIVATE 
+        else setting_markup(_)
+    )
+
     if CallbackQuery.message.chat.type == ChatType.PRIVATE:
-        buttons = private_panel(_)
         return await CallbackQuery.edit_message_text(
             _["start_2"].format(CallbackQuery.from_user.mention, app.mention),
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
-        buttons = setting_markup(_)
         return await CallbackQuery.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(buttons)
         )
