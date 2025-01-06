@@ -86,7 +86,7 @@ class BUTTONS(object):
             InlineKeyboardButton("˹ ᴅєᴠ ˼",  callback_data="PROMOTION_CP"),
         ],
         [
-            InlineKeyboardButton("˹ ɢυɪᴅє  ˼", callback_data="MAIN_BACK HELP_ABOUT"),
+            InlineKeyboardButton("˹ ʙᴧsɪᴄ ɢυɪᴅє  ˼", callback_data="MAIN_BACK HELP_ABOUT"),
             InlineKeyboardButton("˹ sσυꝛᴄє ˼", url="https://t.me/ZOYU_SUPPORT"),
         ],
         [
@@ -116,7 +116,7 @@ class BUTTONS(object):
             InlineKeyboardButton("˹ ᴅєᴠ ˼",  callback_data="PROMOTION_CP"),
         ],
         [
-            InlineKeyboardButton("˹ ɢυɪᴅє  ˼", callback_data="MAIN_BACK HELP_ABOUT"),
+            InlineKeyboardButton("˹ ʙᴧsɪᴄ ɢυɪᴅє  ˼", callback_data="MAIN_BACK HELP_ABOUT"),
             InlineKeyboardButton("˹ sσυꝛᴄє ˼", url="https://t.me/ZOYU_SUPPORT"),
         ],
         [
