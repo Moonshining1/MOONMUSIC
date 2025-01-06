@@ -27,7 +27,7 @@ def private_panel(_):
         ],
         [
            InlineKeyboardButton(text=_["S_B_5"], callback_data="PROMOTION_CP"),
-            InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL),
+            InlineKeyboardButton(text=_["S_B_6"], url=f"https://t.me/shayariAlfaazonKaAaina"),
         ],
 
     ]
