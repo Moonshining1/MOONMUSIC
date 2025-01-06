@@ -7,8 +7,8 @@ from pyrogram.enums import ChatMembersFilter
 from pyrogram.errors import FloodWait
 from pyrogram.raw import types
 
-import config
-from config import OWNER_ID, adminlist, userstats
+import confige
+from confige import OWNER_ID, adminlist, userstats
 from MOON_MUSIC import app
 from MOON_MUSIC.utils.cleanmode import protected_messages
 from MOON_MUSIC.utils.databaset import (
