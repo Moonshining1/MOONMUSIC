@@ -41,12 +41,19 @@ STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
 STRING6 = getenv("STRING_SESSION6", None)
 STRING7 = getenv("STRING_SESSION7", None)
+CLEANMODE_DELETE_MINS = int(
+    getenv("CLEANMODE_MINS", "18000")
+)  # Remember to give value in Seconds
+
 BANNED_USERS = filters.user()
 adminlist = {}
 lyrical = {}
 votemode = {}
 autoclean = []
 confirmer = {}
+chatstats = {}
+userstats = {}
+clean = {}
 START_IMG_URL = getenv("START_IMG_URL", "https://files.catbox.moe/0wtv2m.jpg")
 PING_IMG_URL = getenv("PING_IMG_URL", "https://files.catbox.moe/0wtv2m.jpg")
 PLAYLIST_IMG_URL = "https://telegra.ph/file/79547e01862628bb85df0.jpg"
