@@ -120,7 +120,7 @@ class BUTTONS(object):
             InlineKeyboardButton("˹ sσυꝛᴄє ˼", url="https://t.me/Kittyxupdates"),
         ],
         [
-            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="settingsback_helper"),
+            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="ALLBOT_CP"),
             
         ]
         ]
