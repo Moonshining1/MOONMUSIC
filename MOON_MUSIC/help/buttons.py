@@ -68,7 +68,7 @@ class BUTTONS(object):
         ],
         [
             InlineKeyboardButton("˹ ʜєʟᴘ ˼", callback_data="MAIN_CP"),
-            InlineKeyboardButton("˹ υᴘᴅᴧᴛєs ˼", url="https://t.me/ZOYU_SUPPORT"),
+            InlineKeyboardButton("˹ υᴘᴅᴧᴛєs ˼", url="https://t.me/kittyxupdates"),
         ],
         [
             InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="settingsback_helper"),
@@ -82,12 +82,12 @@ class BUTTONS(object):
             
         ],        
         [
-            InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/THE_INCRICIBLE"),
+            InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/grandxmasti"),
             InlineKeyboardButton("˹ ᴅєᴠ ˼",  callback_data="PROMOTION_CP"),
         ],
         [
             InlineKeyboardButton("˹ ʙᴧsɪᴄ ɢυɪᴅє  ˼", callback_data="MAIN_BACK HELP_ABOUT"),
-            InlineKeyboardButton("˹ sσυꝛᴄє ˼", url="https://t.me/ZOYU_SUPPORT"),
+            InlineKeyboardButton("˹ sσυꝛᴄє ˼", url="https://t.me/Kittyxupdates"),
         ],
         [
             InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="settingsback_helper"),
@@ -105,19 +105,19 @@ class BUTTONS(object):
             InlineKeyboardButton("˹ ɢᴧʟᴧxʏ ˼", callback_data="GALAXYBOT_CP"),
         ],
         [
-            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="MAIN_BACK"),
+            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="settingsback_helper"),
             
         ]
         ]
 
     GBUTTON = [
         [
-            InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/THE_INCRICIBLE"),
+            InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/Grandxmasti"),
             InlineKeyboardButton("˹ ᴅєᴠ ˼",  callback_data="PROMOTION_CP"),
         ],
         [
-            InlineKeyboardButton("˹ ʙᴧsɪᴄ ɢυɪᴅє  ˼", url="https://t.me/THE_INCRICIBLE"),
-            InlineKeyboardButton("˹ sσυꝛᴄє ˼", url="https://t.me/ZOYU_SUPPORT"),
+            InlineKeyboardButton("˹ ɢᴧʟᴧxʏ ˼", callback_data="GALAXYBOT_CP"),
+            InlineKeyboardButton("˹ sσυꝛᴄє ˼", url="https://t.me/Kittyxupdates"),
         ],
         [
             InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="settingsback_helper"),
@@ -127,12 +127,12 @@ class BUTTONS(object):
 
     LBUTTON = [
         [
-            InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/THE_INCRICIBLE"),
-            InlineKeyboardButton("˹ ᴅєᴠ ˼",  callback_data="PROMOTION_CP"),
+            InlineKeyboardButton("˹ sʜʏᴧꝛɪ ˼", url="https://t.me/shayariAlfaazonKaAaina"),
+            InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼",  url="https://t.me/grandxmasti"),
         ],
         [
-            InlineKeyboardButton("˹ ʙᴧsɪᴄ ɢυɪᴅє  ˼", url="https://t.me/THE_INCRICIBLE"),
-            InlineKeyboardButton("˹ sσυꝛᴄє ˼", url="https://t.me/ZOYU_SUPPORT"),
+            InlineKeyboardButton("˹ ᴅєᴠ ˼",  callback_data="PROMOTION_CP"),
+            InlineKeyboardButton("˹ sσυꝛᴄє ˼", url="https://t.me/Kittyxupdates"),
         ],
         [
             InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="settingsback_helper"),
