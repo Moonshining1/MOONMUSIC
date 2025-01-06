@@ -326,7 +326,7 @@ async def authusers_mar(client, CallbackQuery, _):
                     j += 1
                 except:
                     continue
-                msg += f"{j}➤ {user}[<code>{user_id}</code>]\n"
+                msg += f"{j {user}[<code>{user_id}</code>]\n"
                 msg += f"   {_['auth_8']} {admin_name}[<code>{admin_id}</code>]\n\n"
             upl = InlineKeyboardMarkup(
                 [
