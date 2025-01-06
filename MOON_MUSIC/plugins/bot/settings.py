@@ -67,16 +67,15 @@ async def settings_cb(client, CallbackQuery, _):
     )
 
 
-@app.on_callback_query(filters.regex("settingsback_helperh") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("settingsback_helper") & ~BANNED_USERS)
 @languageCB
 async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
     try:
         await CallbackQuery.answer()
-    except:
-        pass
+    except Exception as e:
+        print(f"Failed to answer callback query: {e}")
+        
     if CallbackQuery.message.chat.type == ChatType.PRIVATE:
-        await app.resolve_peer(OWNER_ID)
-        OWNER = OWNER_ID
         buttons = private_panel(_)
         return await CallbackQuery.edit_message_text(
             _["start_2"].format(CallbackQuery.from_user.mention, app.mention),
@@ -391,49 +390,3 @@ async def vote_change(client, CallbackQuery, _):
         return
 
 
-
-from pyrogram import Client, filters
-from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton, ChatType
-from pyrogram.errors import PeerIdInvalid
-
-OWNER_ID = 7297381612  # Replace this with your actual Owner ID
-
-# Example button layouts
-def private_panel(_):
-    return [[InlineKeyboardButton("Help", callback_data="help"), InlineKeyboardButton("Settings", callback_data="settings")]]
-
-
-def setting_markup(_):
-    return [[InlineKeyboardButton("Back", callback_data="settingsback_helper")]]
-
-# Dummy localized text function
-def get_language_strings(key):
-    return {
-        "start_2": "Hello, {0}! Welcome to {1}.",
-    }[key]
-
-
-@app.on_callback_query(filters.regex("settingsback_helper"))
-async def settings_back_markup(client, CallbackQuery: CallbackQuery):
-    try:
-        await CallbackQuery.answer()
-    except:
-        pass
-
-    _ = get_language_strings  # Assuming `_` is a function that returns localized strings
-
-    if CallbackQuery.message.chat.type == "private":  # Direct string check
-        try:
-            await client.resolve_peer(OWNER_ID)
-        except PeerIdInvalid:
-            pass
-        buttons = private_panel(_)
-        return await CallbackQuery.edit_message_text(
-            _["start_2"].format(CallbackQuery.from_user.mention, client.mention),
-            reply_markup=InlineKeyboardMarkup(buttons),
-        )
-    else:
-        buttons = setting_markup(_)
-        return await CallbackQuery.edit_message_reply_markup(
-            reply_markup=InlineKeyboardMarkup(buttons)
-        )
