@@ -1,2 +1,0 @@
-
-from .confige import *
