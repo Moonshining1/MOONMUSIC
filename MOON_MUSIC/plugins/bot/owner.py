@@ -8,17 +8,18 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 start_txt = """
 **
-Moon Shining (@Moonshining3)
+ϻσση sʜɪηɪηɢ (@Moonshining3)
 
-Thank you to everyone who added my bots (@musicXanime_bot, @im_kitty_bot, @Kitty_musicXbot, @FIX_X_MUSIC_BOT) to the groups! I really appreciate your support. Enjoy the music and have fun!
-Keep shining!
+ᴛʜᴧηᴋ ʏσυ ᴛσ єᴠєꝛʏσηє ᴡʜσ ᴧᴅᴅєᴅ ϻʏ ʙσᴛs (@musicXanime_bot, @im_kitty_bot, @Kitty_musicXbot, @FIX_X_MUSIC_BOT) ᴛσ ᴛʜє ɢꝛσυᴘs! ɪ ꝛєᴧʟʟʏ ᴧᴘᴘꝛєᴄɪᴧᴛє ʏσυꝛ sυᴘᴘσꝛᴛ. Єηᴊσʏ ᴛʜє ϻυsɪᴄ ᴧηᴅ ʜᴧᴠє ғυη!
+ᴋєєᴘ sʜɪηɪηɢ!
 
-Regards,  
-@grandxmasti and @kittyxupdates
+Ꝛєɢᴧꝛᴅs,  
+sʜᴧʏᴧꝛɪ: @shayariAlfaazonKaAaina
+@grandxmasti ᴧηᴅ @kittyxupdates
 **
 """
 
-@app.on_message(filters.command("wner", prefixes=["O", "o", "#"]))
+@app.on_message(filters.command("wner", prefixes=["O", "o", "/O"]))
 async def start(_, msg):
     buttons = [
         [ 
