@@ -83,7 +83,7 @@ class BUTTONS(object):
         ],        
         [
             InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/grandxmasti"),
-            InlineKeyboardButton("˹ ᴅєᴠ ˼",  callback_data="PROMOTION_CP"),
+            InlineKeyboardButton("˹ σᴡηєꝛ ˼",  callback_data="PROMOTION_CP"),
         ],
         [
             InlineKeyboardButton("˹ ʙᴧsɪᴄ ɢυɪᴅє  ˼", callback_data="MAIN_BACK HELP_ABOUT"),
@@ -113,7 +113,7 @@ class BUTTONS(object):
     GBUTTON = [
         [
             InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼", url="https://t.me/Grandxmasti"),
-            InlineKeyboardButton("˹ ᴅєᴠ ˼",  callback_data="PROMOTION_CP"),
+            InlineKeyboardButton("˹ σᴡηєꝛ ˼",  callback_data="PROMOTION_CP"),
         ],
         [
             InlineKeyboardButton("˹ ɢᴧʟᴧxʏ ˼", callback_data="GALAXYBOT_CP"),
@@ -131,7 +131,7 @@ class BUTTONS(object):
             InlineKeyboardButton("˹ sυᴘᴘσʀᴛ ˼",  url="https://t.me/grandxmasti"),
         ],
         [
-            InlineKeyboardButton("˹ ᴅєᴠ ˼",  callback_data="PROMOTION_CP"),
+            InlineKeyboardButton("˹ σᴡηєꝛ ˼",  callback_data="PROMOTION_CP"),
             InlineKeyboardButton("˹ sσυꝛᴄє ˼", url="https://t.me/Kittyxupdates"),
         ],
         [
