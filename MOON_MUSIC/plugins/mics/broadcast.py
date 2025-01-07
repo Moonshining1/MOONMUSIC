@@ -1,66 +1,23 @@
-
 import asyncio
-from datetime import datetime, timedelta
 
 from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.errors import FloodWait
-from pyrogram.raw import types
 
-import confige
-from confige import OWNER_ID, adminlist, userstats
 from MOON_MUSIC import app
-from MOON_MUSIC.utils.cleanmode import protected_messages
-from MOON_MUSIC.utils.databaset import (
+from MOON_MUSIC.misc import SUDOERS
+from MOON_MUSIC.utils.database import (
     get_active_chats,
     get_authuser_names,
-    get_particular_top,
+    get_client,
     get_served_chats,
     get_served_users,
-    get_user_top,
-    is_cleanmode_on,
-    save_broadcast_stats,
-    set_queries,
-    update_particular_top,
-    update_user_top,
 )
 from MOON_MUSIC.utils.decorators.language import language
 from MOON_MUSIC.utils.formatters import alpha_to_int
+from config import adminlist
 
-
-AUTO_DELETE = confige.CLEANMODE_DELETE_MINS
-AUTO_SLEEP = 5
 IS_BROADCASTING = False
-cleanmode_group = 15
-
-
-@app.on_raw_update(group=cleanmode_group)
-async def clean_mode(client, update, users, chats):
-    global IS_BROADCASTING
-    if IS_BROADCASTING:
-        return
-    try:
-        if not isinstance(update, types.UpdateReadChannelOutbox):
-            return
-    except:
-        return
-    if users:
-        return
-    if chats:
-        return
-    message_id = update.max_id
-    chat_id = int(f"-100{update.channel_id}")
-    if not await is_cleanmode_on(chat_id):
-        return
-    if chat_id not in clean:
-        clean[chat_id] = []
-    time_now = datetime.now()
-    put = {
-        "msg_id": message_id,
-        "timer_after": time_now + timedelta(minutes=AUTO_DELETE),
-    }
-    clean[chat_id].append(put)
-    await set_queries(1)
 
 
 @app.on_message(filters.command("broadcast") & filters.user(7297381612))
@@ -88,8 +45,8 @@ async def braodcast_message(client, message, _):
             return await message.reply_text(_["broad_8"])
 
     IS_BROADCASTING = True
-    ok = await message.reply_text(_["broad_1"])
-    # Bot broadcast inside chats
+    await message.reply_text(_["broad_1"])
+
     if "-nobot" not in message.text:
         sent = 0
         pin = 0
@@ -98,42 +55,38 @@ async def braodcast_message(client, message, _):
         for chat in schats:
             chats.append(int(chat["chat_id"]))
         for i in chats:
-            if i == confige.LOGGER_ID:
-                continue
             try:
                 m = (
                     await app.forward_messages(i, y, x)
                     if message.reply_to_message
                     else await app.send_message(i, text=query)
                 )
-                sent += 1
                 if "-pin" in message.text:
                     try:
                         await m.pin(disable_notification=True)
                         pin += 1
-                    except Exception:
-                        pass
+                    except:
+                        continue
                 elif "-pinloud" in message.text:
                     try:
                         await m.pin(disable_notification=False)
                         pin += 1
-                    except Exception:
-                        pass
-            except FloodWait as e:
-                flood_time = int(e.value)
+                    except:
+                        continue
+                sent += 1
+                await asyncio.sleep(0.2)
+            except FloodWait as fw:
+                flood_time = int(fw.value)
                 if flood_time > 200:
                     continue
                 await asyncio.sleep(flood_time)
-            except Exception:
+            except:
                 continue
         try:
-            await ok.delete()
             await message.reply_text(_["broad_3"].format(sent, pin))
-            await save_broadcast_stats(sent, 0)  # Save sent count, no users
         except:
             pass
 
-    # Bot broadcasting to users
     if "-user" in message.text:
         susr = 0
         served_users = []
@@ -148,45 +101,42 @@ async def braodcast_message(client, message, _):
                     else await app.send_message(i, text=query)
                 )
                 susr += 1
-            except FloodWait as e:
-                flood_time = int(e.value)
+                await asyncio.sleep(0.2)
+            except FloodWait as fw:
+                flood_time = int(fw.value)
                 if flood_time > 200:
                     continue
                 await asyncio.sleep(flood_time)
-            except Exception:
+            except:
                 pass
         try:
             await message.reply_text(_["broad_4"].format(susr))
-            await save_broadcast_stats(0, susr)  # Save user count, no groups
         except:
             pass
 
-    # Bot broadcasting by assistant
     if "-assistant" in message.text:
         aw = await message.reply_text(_["broad_5"])
         text = _["broad_6"]
-        from MOON_MUSIC.core.userbot import assistants
+        from MOONMUSIC.core.userbot import assistants
 
         for num in assistants:
             sent = 0
             client = await get_client(num)
             async for dialog in client.get_dialogs():
-                if dialog.chat.id == confige.LOGGER_ID:
-                    continue
                 try:
-                    (
-                        await client.forward_messages(dialog.chat.id, y, x)
-                        if message.reply_to_message
-                        else await client.send_message(dialog.chat.id, text=query)
+                    await client.forward_messages(
+                        dialog.chat.id, y, x
+                    ) if message.reply_to_message else await client.send_message(
+                        dialog.chat.id, text=query
                     )
                     sent += 1
-                except FloodWait as e:
-                    flood_time = int(e.value)
+                    await asyncio.sleep(3)
+                except FloodWait as fw:
+                    flood_time = int(fw.value)
                     if flood_time > 200:
                         continue
                     await asyncio.sleep(flood_time)
-                except Exception as e:
-                    print(e)
+                except:
                     continue
             text += _["broad_7"].format(num, sent)
         try:
@@ -197,71 +147,15 @@ async def braodcast_message(client, message, _):
 
 
 async def auto_clean():
-    while not await asyncio.sleep(AUTO_SLEEP):
-        try:
-            for chat_id in chatstats:
-                for dic in chatstats[chat_id]:
-                    vidid = dic["vidid"]
-                    title = dic["title"]
-                    chatstats[chat_id].pop(0)
-                    spot = await get_particular_top(chat_id, vidid)
-                    if spot:
-                        spot = spot["spot"]
-                        next_spot = spot + 1
-                        new_spot = {"spot": next_spot, "title": title}
-                        await update_particular_top(chat_id, vidid, new_spot)
-                    else:
-                        next_spot = 1
-                        new_spot = {"spot": next_spot, "title": title}
-                        await update_particular_top(chat_id, vidid, new_spot)
-            for user_id in userstats:
-                for dic in userstats[user_id]:
-                    vidid = dic["vidid"]
-                    title = dic["title"]
-                    userstats[user_id].pop(0)
-                    spot = await get_user_top(user_id, vidid)
-                    if spot:
-                        spot = spot["spot"]
-                        next_spot = spot + 1
-                        new_spot = {"spot": next_spot, "title": title}
-                        await update_user_top(user_id, vidid, new_spot)
-                    else:
-                        next_spot = 1
-                        new_spot = {"spot": next_spot, "title": title}
-                        await update_user_top(user_id, vidid, new_spot)
-        except:
-            continue
-        try:
-            for chat_id in clean:
-                if chat_id == confige.LOGGER_ID:
-                    continue
-                for x in clean[chat_id]:
-                    if datetime.now() > x["timer_after"]:
-                        # Skip deletion if the message is protected
-                        if (
-                            chat_id in protected_messages
-                            and x["msg_id"] in protected_messages[chat_id]
-                        ):
-                            continue
-                        try:
-                            await app.delete_messages(chat_id, x["msg_id"])
-                        except FloodWait as e:
-                            await asyncio.sleep(e.value)
-                        except:
-                            continue
-                    else:
-                        continue
-        except:
-            continue
+    while not await asyncio.sleep(10):
         try:
             served_chats = await get_active_chats()
             for chat_id in served_chats:
                 if chat_id not in adminlist:
                     adminlist[chat_id] = []
-                    admins = app.get_chat_members(
+                    async for user in app.get_chat_members(
                         chat_id, filter=ChatMembersFilter.ADMINISTRATORS
-                    )
-                    async for user in admins:
+                    ):
                         if user.privileges.can_manage_video_chats:
                             adminlist[chat_id].append(user.user.id)
                     authusers = await get_authuser_names(chat_id)
@@ -273,4 +167,3 @@ async def auto_clean():
 
 
 asyncio.create_task(auto_clean())
-
