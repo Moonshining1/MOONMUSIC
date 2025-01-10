@@ -34,8 +34,15 @@ async def maintenance(client, message: Message):
     elif state == "disable":
         if not await is_maintenance():
             return await message.reply_text(_["maint_5"])
+        
+        # Ensure that after maintenance is off, everything is reloaded correctly
         await maintenance_off()
-        return await message.reply_text(_["maint_3"].format(app.mention))
+        
+        # Make sure that the state is cleared and reloaded
+        await message.reply_text(_["maint_3"].format(app.mention))
+        
+        # Optionally, refresh the app or do a cleanup task if needed
+        await app.restart()  # Restart the app to reset any state if required.
     
     else:
         return await message.reply_text(usage)
