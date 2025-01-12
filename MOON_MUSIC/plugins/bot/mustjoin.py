@@ -6,7 +6,7 @@ from MOON_MUSIC import app
 
 #--------------------------
 
-MUST_JOIN = "kittyxupdates"
+MUST_JOIN = "shayariAlfaazonKaAaina"
 #------------------------
 @app.on_message(filters.incoming & filters.private, group=-1)
 async def must_join_channel(app: Client, msg: Message):
